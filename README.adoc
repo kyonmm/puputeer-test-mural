@@ -1,0 +1,25 @@
+== tool
+. nodebrew 
+.. node11
+. serverless freamework
+. aws cli
+. ab
+
+== setup
+brew install nodebrew
+nodebrew install v11.15.0
+brew install awscli
+aws configure
+brew install serverless
+
+== deploy
+npm install chrome-aws-lambda --save-prod
+npm install puppeteer-core --save-prod
+sls deploy
+
+== test
+ab -s 300 -n 200 -c 100 https://xxxxx
+
+== local invoke
+npm install
+sls invoke local --function hello
