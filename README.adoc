@@ -6,20 +6,31 @@
 . ab
 
 == setup
+[source, sh]
+----
 brew install nodebrew
 nodebrew install v11.15.0
 brew install awscli
 aws configure
 brew install serverless
+----
 
 == deploy
+[source, sh]
+----
 npm install chrome-aws-lambda --save-prod
 npm install puppeteer-core --save-prod
 sls deploy
-
+----
 == test
-ab -s 300 -n 200 -c 100 https://xxxxx
+[source, sh]
+----
+ab -s 300 -n 200 -c 100 https://xxxxx // API Gateway URL
+----
 
 == local invoke
+[source, sh]
+----
 npm install
 sls invoke local --function hello
+----
